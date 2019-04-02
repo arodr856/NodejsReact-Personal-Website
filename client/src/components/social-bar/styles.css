@@ -1,0 +1,12 @@
+.social-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    margin-right: 0px;
+}
+
+.socialbar-item {
+    margin: 4px;
+    width:40px;
+}
