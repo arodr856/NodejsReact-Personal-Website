@@ -4,9 +4,12 @@
     justify-content: center;
     width: 100px;
     margin-right: 0px;
+    margin-bottom: 100px;
+    position: absolute;
+    bottom: 0;
 }
 
 .socialbar-item {
-    margin: 4px;
+    margin: 10px;
     width:40px;
 }

@@ -25,11 +25,11 @@ class SocialBar extends React.Component {
     render(){
         return (
             <div className='social-bar'>
-                {this.state.socialSites.map(item => {
+                {this.state.socialSites.map((item, index) => {
                     return (
-                        <div className='socialbar-item'>
+                        <div key={index} className='socialbar-item'>
                             <a href={item.url}>
-                                <img src={`/social-icons/${item.icon}`}></img>
+                                <img src={`/social-icons/${item.icon}`} alt={item.name}></img>
                             </a>
                         </div>
                     );
