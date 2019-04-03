@@ -12,20 +12,28 @@ class MainCenter extends React.Component {
     }
 
     word(){
-        this.setState(state => {
-            return {currentWord: state.elements[state.currentIndex], currentIndex: ((state.currentIndex + 1) % state.elements.length)};
-        });
+
+        setInterval(async () => {
+            const word = this.state.elements[this.state.currentIndex];
+            const index = this.state.currentIndex;
+            const wordIndex = this.state.currentWordIndex;
+            const currentWord = this.state.currentWord;
+
+            if(wordIndex < word.length){
+                await this.setState({currentWord: (currentWord + word.charAt(wordIndex)), currentWordIndex: (wordIndex + 1)});
+            }else{  
+                await this.setState({currentIndex: ((this.state.currentIndex + 1) % this.state.elements.length), currentWordIndex: 0, currentWord: ''});
+            }
+        }, 1000);
         
     }
 
+    
     componentDidMount(){
-        setInterval(() => {
-            this.word();
-        }, 1000);
+        this.word();
     }
 
     render(){
-        
         return(
             <div className='main-center text-white'>
                 <h1>Alex Rodriguez</h1>
