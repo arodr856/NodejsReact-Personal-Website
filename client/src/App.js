@@ -14,14 +14,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="homePage">
-          <NavBar></NavBar>
-          <SocialBar></SocialBar>
-          <MainCenter></MainCenter>
-        </div>
-        <div className='github-table'>
-          <GitHubTable></GitHubTable> 
-        </div>
+        <section className='showcase home-page'>
+          <NavBar className='app-nav'/>
+          <MainCenter/>
+          <SocialBar/>
+        </section>
+        <div className='test'></div>
       </div>
     );
   }

@@ -2,6 +2,7 @@ import React from 'react'
 import { Jumbotron, Container } from 'reactstrap';
 import { connect } from 'react-redux';
 import { fetchRepos } from '../../actions/GitHubActions';
+import './styles.css';
 
 class GitHubTable extends React.Component {
     
@@ -12,7 +13,7 @@ class GitHubTable extends React.Component {
 
     render(){
         return (
-            <div>
+            <div className='github'>
                 <Jumbotron fluid>
                     <Container fluid>
                     <h1 className="display-3">Fluid jumbotron</h1>

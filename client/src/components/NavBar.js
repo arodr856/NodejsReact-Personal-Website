@@ -32,8 +32,8 @@ export default class NavBar extends React.Component {
 
     render() {
         return (
-        // <div>
-            <Navbar dark expand="md">
+        <div className='app-nav'>
+            <Navbar dark expand="md" fixed='fixed'>
                 <NavbarBrand href="/">Alex Rodriguez</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
@@ -64,7 +64,7 @@ export default class NavBar extends React.Component {
                     </Nav>
                 </Collapse>
             </Navbar>
-        // </div>
+        </div>
         );
     }
 }

@@ -1,3 +1,10 @@
-.main-center {
-    
+p, h1 {
+    color: white;
+}
+
+.main-center{
+    position: relative;
+    margin: auto;
+    height: 250px;
+    width: 250px;
 }

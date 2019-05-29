@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './styles.css';
 
 class MainCenter extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            elements: ['Java', 'JavaScript', 'C.', 'Node.js', 'Express.js', 'React.js', 'Redux.js', 'Web Developer'],
+            elements: ['Java', 'JavaScript', 'C.', 'Node.js', 'Express.js', 'React.js', 'Redux.js', 'Web Developer', 'GIT Version Control'],
             currentWord: '',
             currentIndex: 0,
             currentWordIndex: 0,
@@ -30,7 +31,7 @@ class MainCenter extends React.Component {
                     await this.setState({currentWord: '', currentIndex: (this.state.currentIndex + 1) % this.state.elements.length, wordIndex: 0});
                 }
             }
-        }, 200);
+        }, 500);
         
     }
 
