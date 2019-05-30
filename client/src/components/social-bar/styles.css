@@ -1,8 +1,9 @@
 .social-bar {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100px;
+    width: 45px;
     margin-right: 0px;
     margin-bottom: 100px;
     position: fixed;

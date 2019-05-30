@@ -5,6 +5,7 @@ p, h1 {
 .main-center{
     position: relative;
     margin: auto;
+    /* top: 25%; */
     height: 250px;
     width: 250px;
 }

@@ -41,7 +41,7 @@ class MainCenter extends React.Component {
 
     render(){
         return(
-            <div className='main-center text-white'>
+            <div className='main-center' style={{top: this.props.top}}>
                 <h1>Alex Rodriguez</h1>
                 <p>{this.state.currentWord}</p>
             </div>

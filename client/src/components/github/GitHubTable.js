@@ -1,5 +1,5 @@
 import React from 'react'
-import { Jumbotron, Container } from 'reactstrap';
+import { Table } from 'reactstrap';
 import { connect } from 'react-redux';
 import { fetchRepos } from '../../actions/GitHubActions';
 import './styles.css';
@@ -14,12 +14,32 @@ class GitHubTable extends React.Component {
     render(){
         return (
             <div className='github'>
-                <Jumbotron fluid>
-                    <Container fluid>
-                    <h1 className="display-3">Fluid jumbotron</h1>
-                    <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-                    </Container>
-                </Jumbotron>
+                <div className='container'>
+                    <Table bordered responsive>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Language</th>
+                                <th>Date Created</th>
+                                <th>GitHub URL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.props.github.repos.map(({name, language, html_url, clone_url, created_at, description}) => {
+                                return (
+                                    <tr key={name}>
+                                        <td>{name}</td>
+                                        <td><div className='desc_col'><p>{description === null ? 'N/A' : description}</p></div></td>
+                                        <td>{language}</td>
+                                        <td>{created_at}</td>
+                                        <td>{<a href={html_url}>Go to GitHub</a>}</td>
+                                    </tr>
+                                );  
+                            })}
+                        </tbody>
+                    </Table>
+                </div>
             </div>
         );
     }

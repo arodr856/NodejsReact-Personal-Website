@@ -1,3 +1,36 @@
-.github{
+.github {
+    position: relative;
+    padding-top: 10px;
+    box-sizing: border-box;
     height: 100%;
 }
+
+.github .container {
+    position: absolute;
+    top: 25%;
+    left: 17.5%;
+    right: 17.5%;
+    width: 65%;
+    max-height: 50vh;
+    overflow: scroll;
+}
+
+td a{
+    color: white;
+}
+
+td a:hover {
+    text-decoration: none;
+    color: green;
+}
+
+tr {
+    color: white;
+}
+
+tr .desc_col{
+    width: 200px;
+    max-height: 50px;
+    overflow: scroll;
+}
+
